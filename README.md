@@ -1,6 +1,8 @@
 kml_writer.py
+-------------
 
-A Simple KML Writer module written in Python for creating KML files for Google Earth.
+KML Writer module written in Python for creating KML files for Google Earth.    
+
 
 
     #Usage example:
@@ -16,7 +18,7 @@ A Simple KML Writer module written in Python for creating KML files for Google E
     trackStyle = kml.Style("trackStyle", line={'color': 'ff00ff00', 'width': '12'}, poly={'color': 'f0f0f0f0'})
     pointStyle = kml.Style("pointStyle", icon={'icon': 'http://google.com/kml/example/icon.png'})
     trackDescription = "<b>A basic html description</b>"
-    track = kml.Path(latitudes, longitudes, altsArray=altitudes, extrude=1, tessellate=1, name="A Track",         description=trackDescr    iption, style="trackStyle")
+    track = kml.Path(latitudes, longitudes, altsArray=altitudes, extrude=1, tessellate=1, name="A Track", description=trackDescription, style="trackStyle")
     kmldoc.addElements(trackStyle, pointStyle, track)
 
     for latitude, longitude, date in data:
@@ -27,5 +29,6 @@ A Simple KML Writer module written in Python for creating KML files for Google E
     # Write document to a file
     kml.writeKML(kmldoc.document, "example.kml")
 
-    #############################################################
-    See Google's KML documentation for more information.
+    
+
+See Google's KML documentation for more information.
